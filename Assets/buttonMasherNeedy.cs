@@ -3,7 +3,8 @@ using System.Collections;
 using System;
 
 public class buttonMasherNeedy : MonoBehaviour {
-    
+
+    public KMAudio KMAudio;
     public KMSelectable Solvebutton;
     public TextMesh displayTxt;
     int rngTxt = 0;
@@ -21,6 +22,7 @@ public class buttonMasherNeedy : MonoBehaviour {
 
     protected bool Solve()
     {
+        KMAudio.HandlePlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
         if (isActive == 1)
         {
             if (counter > -1)
