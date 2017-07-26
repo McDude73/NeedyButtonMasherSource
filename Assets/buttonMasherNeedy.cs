@@ -77,6 +77,8 @@ public class buttonMasherNeedy : MonoBehaviour {
         isActive = 0;
     }
 
+    public string TwitchManualCode = "Button Masher";
+    public string TwitchHelpMessage = "!{0} press 13, !{0} tap 13, !{0} mash 13 (mash the button 13 times)";
     public KMSelectable[] ProcessTwitchCommand(string command)
     {
         command = command.ToLowerInvariant();
