@@ -23,6 +23,7 @@ public class buttonMasherNeedy : MonoBehaviour {
     protected bool Solve()
     {
         KMAudio.HandlePlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+        Solvebutton.AddInteractionPunch(0.5f);
         if (isActive == 1)
         {
             if (counter > -1)
