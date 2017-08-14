@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: needyButtonMasher
   title: Needy Button Masher
-  version: 0.5
+  version: 0.7
   outputFolder: builds

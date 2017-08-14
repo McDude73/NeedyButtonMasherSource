@@ -2,8 +2,9 @@
 using System.Collections;
 using System;
 
-public class buttonMasherNeedy : MonoBehaviour {
-    
+public class buttonMasherNeedyT : MonoBehaviour
+{
+
     public KMAudio KMAudio;
     public KMSelectable Solvebutton;
     public TextMesh displayTxt;
@@ -76,5 +77,30 @@ public class buttonMasherNeedy : MonoBehaviour {
             displayTxt.text = "__";
         }
         isActive = 0;
+    }
+    public KMSelectable[] ProcessTwitchCommand(string command)
+    {
+        command = command.ToLowerInvariant();
+        if (!command.StartsWith("press ") &&
+             !command.StartsWith("tap ") &&
+             !command.StartsWith("push ") &&
+             !command.StartsWith("mash "))
+        {
+            return null;
+        }
+
+        command = command.Substring(command.IndexOf(" ") + 1);
+        int presses;
+        if (!int.TryParse(command, out presses))
+        {
+            return null;
+        }
+
+        KMSelectable[] interacts = new KMSelectable[presses];
+        for (int i = 0; i < presses; i++)
+        {
+            interacts[i] = Solvebutton;
+        }
+        return interacts;
     }
 }
