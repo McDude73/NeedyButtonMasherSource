@@ -8,12 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
-  m_Name: ModConfig
+  m_Script: {fileID: 11500000, guid: 34a4fefeeafb9a5439cfbd83306ba467, type: 3}
+  m_Name: Default
   m_EditorClassIdentifier: 
-  id: needyButtonMasher
-  title: Needy Button Masher
-  description: 
-  version: 0.8
-  outputFolder: build
-  previewImage: {fileID: 0}
+  SerialNumberType: 0
+  CustomSerialNumber: 
+  Widgets: []
